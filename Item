@@ -1,0 +1,38 @@
+/**************************************************************
+ * Amal Verma
+ * February 13, 2020
+ * 
+ * Item.java
+ *************************************************************/
+ public class Item
+ {
+     private String name;
+     private double price;
+     private int quantity;
+     public Item(String a, double p, int q)
+     {
+         name = a;
+         price = p;
+         quantity = q;
+     }
+     
+     public String toString()
+     {
+         return name + "\t" + price + "\t\t" + quantity + "\t\t" + (price*quantity);
+     }
+     
+     public String getName()
+     {
+         return name;
+     }
+     
+     public double getPrice()
+     {
+         return price;
+     }
+     
+     public int getQuantity()
+     {
+         return quantity;
+     }
+ }

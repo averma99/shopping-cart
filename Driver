@@ -1,0 +1,36 @@
+/**************************************************************
+ * Amal Verma
+ * March 2, 2020
+ * 
+ * Driver.java
+ *************************************************************/
+
+import java.util.*;
+
+public class Driver
+{
+    public static void main(String args[])
+    {
+        String done = "yes";
+        int ans,ansc;
+        double ansb;
+        String ansa;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("How many Items are you going to buy today?");
+        ans = scan.nextInt();
+        ShoppingCart winner = new ShoppingCart(ans);
+        while (done.equalsIgnoreCase("yes") || done.equalsIgnoreCase("y"))
+        {
+            System.out.println("What is the name of the Item you would like to purchase?");
+            ansa = scan.next();
+            System.out.println("What is the price of the Item you would like to purchase?");
+            ansb = scan.nextDouble();
+            System.out.println("What is the quantity of the Item you would like to purchase?");
+            ansc = scan.nextInt();
+            winner.addToCart(ansa,ansb,ansc);
+            System.out.println(winner.toString());
+            System.out.println("Type \"yes\" or \"y\" if you would like to continue shopping");
+            done = scan.next();
+        }
+    }
+}
